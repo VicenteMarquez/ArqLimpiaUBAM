@@ -1,0 +1,27 @@
+@model Application.Common.Models.HomeViewModel
+
+@{
+    ViewData["Title"] = "Inicio";
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+<div class="info-card m-4">
+    <div class="welcome-card text-center">
+        <h1 class="display-4 mb-3 fw-bold" style="color: var(--color-dark-blue);">Bienvenido, @Model.UserName</h1>
+        <p class="lead fw-bold">Rol: @Model.Role</p>
+    </div>
+
+    <div class="cards-container d-flex flex-wrap justify-content-center">
+        @for (var i = 0; i < 4; i++)
+        {
+            <div class="m-3">
+                @await Html.PartialAsync("./Card.cshtml", new
+                {
+                    Title = "~ " + Model.UserName,
+                    Text = "Esto es un ejemplo de texto para mostrar en la tarjeta",
+                    Tag = "HelloWorld"
+                })
+            </div>
+        }
+    </div>
+</div>

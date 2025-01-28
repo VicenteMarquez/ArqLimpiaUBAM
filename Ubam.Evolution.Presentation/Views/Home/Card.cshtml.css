@@ -1,0 +1,41 @@
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.profile-card {
+    background-color: #552121;
+    color: var(--color-cream);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.profile-card .username {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.profile-card .bio {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .profile-card {
+        width: 100%;
+    }
+}

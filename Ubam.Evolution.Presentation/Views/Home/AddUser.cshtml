@@ -1,0 +1,119 @@
+﻿@model Application.DTOs.UserRequestDto
+
+@{
+    ViewData["Title"] = "Agregar Usuario";
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+<div class="form-container m-4">
+    <h2 class="section-title text-center">Registro de Usuario</h2>
+    @if (!ViewData.ModelState.IsValid)
+    {
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <div class="alert alert-danger" role="alert">
+                @error.ErrorMessage
+            </div>
+        }
+    }
+    <form asp-action="AddUser" method="post" class="needs-validation" novalidate>
+        <div class="form-section">
+            <h5 class="mb-3">Información Personal</h5>
+
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="firstName" name="FirstName" required>
+                        <label for="firstName">Nombre</label>
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="lastNamePaternal" name="LastNamePaternal" required>
+                        <label for="lastNamePaternal">Apellido Paterno</label>
+                        <span asp-validation-for="LastNamePaternal" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="lastNameMaternal" name="LastNameMaternal" required>
+                        <label for="lastNameMaternal">Apellido Materno</label>
+                        <span asp-validation-for="LastNameMaternal" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="date" class="form-control" id="dateOfBirth" name="DateOfBirth" value="2003-02-25"
+                               required>
+                        <label for="dateOfBirth">Fecha de Nacimiento</label>
+                        <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <select class="form-select" id="gender" name="Gender" required>
+                            <option value="" selected disabled>Selecciona una opción</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Femenino">Femenino</option>
+                        </select>
+                        <label for="gender">Género</label>
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h5 class="mb-3">Información de Cuenta</h5>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="curp" name="Curp" required
+                               pattern="^[A-Z]{4}[0-9]{6}[HM][A-Z]{5}[0-9A-Z][0-9]$">
+                        <label for="curp">CURP</label>
+                        <span asp-validation-for="Curp" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <select class="form-select" id="role" name="Role" required>
+                            <option value="" selected disabled>Selecciona una opción</option>
+                            <option value="Administrador">Administrador</option>
+                            <option value="Docente">Docente</option>
+                            <option value="Alumno">Alumno</option>
+                        </select>
+                        <label for="role">Rol</label>
+                        <span asp-validation-for="Role" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-2">
+                <div class="col-12">
+                    <div class="form-floating password-field">
+                        <input type="password" class="form-control" id="userPassword" name="UserPassword" required>
+                        <label for="userPassword">Contraseña</label>
+                        <span asp-validation-for="UserPassword" class="text-danger"></span>
+                    </div>
+                    <div class="progress mt-2">
+                        <div class="progress-bar" role="progressbar" style="width: 0%;"></div>
+                    </div>
+                    <small class="password-strength-text"></small>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-lg text-white" style="background-color: var(--color-ocre)">
+                Registrar Usuario <i class="bi bi-person-plus-fill ms-2"></i>
+            </button>
+        </div>
+    </form>
+</div>
+
+
+<script src="~/js/AddUser.js"></script>

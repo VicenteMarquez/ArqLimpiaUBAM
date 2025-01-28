@@ -1,0 +1,57 @@
+﻿@model List<Ubam.Evolution.Domain.Entities.Persona>
+
+@{
+    ViewData["Title"] = "Empleados";
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+<section class="m-4">
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </div>
+    }
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead class="table-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido paterno</th>
+                <th scope="col">Apellido materno</th>
+                <th scope="col">Fecha de nacimiento</th>
+                <th scope="col">Genero</th>
+                <th scope="col">CURP</th>
+            </tr>
+            </thead>
+            <tbody>
+            @if (Model.Any())
+            {
+                @for (var i = 0; i < Model.Count; i++)
+                {
+                    <tr>
+                        <th scope="row">@(i + 1)</th>
+                        <td>@Model[i].Nombre_Persona</td>
+                        <td>@Model[i].ApellidoPaterno_Persona</td>
+                        <td>@Model[i].ApellidoMaterno_Persona</td>
+                        <td>@Model[i].FechaDeNacimiento_Persona</td>
+                        <td>@Model[i].Genero_Persona</td>
+                        <td>@Model[i].Curp_Persona</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="7" class="text-center">No se encontraron docentes</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</section>

@@ -1,0 +1,49 @@
+﻿.form-container {
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(100px);
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.form-floating > label {
+    padding-left: 1rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--color-beige);
+    box-shadow: 0 0 0 0.25rem rgba(var(--color-beige), 0.25);
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6c757d;
+}
+
+.progress {
+    height: 4px;
+    margin-top: 0.5rem;
+}
+
+.section-title {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--color-beige);
+}
+
+.form-section {
+    background: rgba(218, 205, 187, 0.25);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
