@@ -1,0 +1,109 @@
+﻿
+.Login {
+    background: url("https://fondosmil.co/fondo/27475.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    background-color: white;
+    border: solid 5px white;
+    border-radius: 5px;
+    margin-top: 1.5%;
+    width: 30%;
+    height: 50%;
+    font-size: larger;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.Conteniner-04 {
+    background-color: rgb(39, 161, 236);
+    height: 5%;
+    color: white;
+}
+
+.image_log {
+    width: 45.5%;
+    margin-right: 120px;
+    margin-top: 5%;
+}
+
+
+
+.Escudo {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.Login {
+    background: url("https://fondosmil.co/fondo/27475.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    background-color: white;
+    border: solid 5px white;
+    border-radius: 5px;
+    margin-top: 1.5%;
+    width: 30%;
+    height: 50%;
+    font-size: larger;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.Conteniner-04 {
+    background-color: rgb(39, 161, 236);
+    height: 5%;
+    color: white;
+}
+
+.image_log {
+    width: 45.5%;
+    margin-right: 120px;
+    margin-top: 5%;
+}
+
+
+
+.Escudo {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
+
+
+.cuerpo {
+    background: url("https://p4.wallpaperbetter.com/wallpaper/4/562/548/dark-pattern-texture-wallpaper-preview.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.contenedor {
+    background-color: rgba(39, 161, 236,0.7);
+    width: 95%;
+    height: 95%;
+    color: white;
+    border: white solid 2px;
+    border-radius: 5px;
+    position: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-family: Tahoma;
+    font-size: xx-large;
+}
